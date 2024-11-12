@@ -2,9 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us for more information about Pennsylvania cities.">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<header>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Get in touch with us for more information or inquiries.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="philadelphia.html">Philadelphia</a></li>
+        <li><a href="harrisburg.html">Harrisburg</a></li>
+        <li><a href="lancaster.html">Lancaster</a></li>
+    </ul>
+</nav>
+
+<section>
+    <h2>Contact Information</h2>
+    <p>If you have any questions about PA, feel free to reach out to us!</p>
+
+    <div class="contact-details">
+        <p><strong>Email:</strong> <a href="mailto:info@d277pa.com">info@d277pa.com</a></p>
+        <p><strong>Phone:</strong> (800)-920-3465</p>
+        <p><strong>Address:</strong> Pennsylvania, PA 00000</p>
+    </div>
+
+    <h3>Send us a message!</h3>
+    <form id="contact-form" method="POST" onsubmit="return validateForm()">
+
+        <p><label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required></p>
+
+        <p><label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required></p>
+
+        <p><label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required></p>
+
+        <p><label for="confirm-email">Confirm Email Address:</label>
+            <input type="email" id="confirm-email" name="confirm-email" required></p>
+
+        <p><label for="question">Your Question:</label>
+            <textarea id="question" name="question" rows="4" required></textarea></p>
+
+        <p><button type="submit">Submit</button></p>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Explore Pennsylvania. D277 Class.</p>
+</footer>
+
+<script>
+    function validateForm() {
+        var email = document.getElementById('email').value;
+        var confirmEmail = document.getElementById('confirm-email').value;
+
+        if (email !== confirmEmail) {
+            alert("Email addresses do not match. Please check your entries.");
+            return false;
+        }
+        return true;
+    }
+</script>
 
 </body>
 </html>
